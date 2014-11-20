@@ -1,11 +1,14 @@
 // A Point object represents a pair of (x, y) coordinates.
 public class Point {
+  int x;
+  int y;
   
   Point a = new Point(0, 0); //Construct a point at (0, 0)
   
-  public static void Pointb(int x, int y) {
+  public Point(int x, int y) { //Construct a point and set it to (x, y)
     
-    Point b = new Point(x, y); //Construct a point at (x, y)
+    this.x = x;
+    this.y = y;
   }
   
 }
