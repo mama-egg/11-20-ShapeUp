@@ -6,7 +6,7 @@ public class Line {
   int a;
   int b;
   
-  public Line(Point p3, int a, int b) {
+  public Line (Point p3, int a, int b) {
     double slopezero = (p3.y - p3.y)/(p3.x - p3.x);
     double plusb = p3.y - (slopezero * p3.x);
     this.x = this.x + a;
@@ -14,20 +14,20 @@ public class Line {
     
   }
   
-  public Line(Point start, Point end, int a, int b) {
-    double slope = (end.y - start.y)/(end.x - start.x);
-    double b = start.y - (slope * start.x);
+  public Line (Point start, Point end, int a, int b) {
+    public double length (Point start, Point end) {
+      distance(start, end);
+      return dist;
+    }
     
-    int tempy = end.y - start.y;
-    int tempx = end.x - start.x;
-    int tempy2 = (end.y - start.y)*(end.y - start.y);
-    int tempx2 = (end.x - start.x)*(end.x - start.x);
-    double length = Math.sqrt(tempy2 + tempx2);
+    public double slope (Point start, Point end) {
+      double slope = (end.y - start.y)/(end.x - strat.x);
+      return slope;
+    }
     
-    this.x = this.x + a;
-    this.y = this.y + b;
-    
+    public String toString (Point start, Point end) {
+      String linestring = ("((" + start.x + "," + start.y + ")(" + end.x + "," + end.y + "))");
+      return linestring;
+    }
   }
-  
-  
 }
