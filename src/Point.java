@@ -9,29 +9,44 @@ public class Point {
   }
   
   public Point(int x, int y) { //Construct a point and set it to (x, y)
-  getX();
-  }
   
-  public int getX (Point a) { //Return the x value of the point
-    return this.x;
-  }
-  
-  public int getY (Point a) { //Return the y value of the point
-    return this.y;
-  }
-  
-  public double distanceFromOrigin (Point a) { //Find the point's distance from (0, 0)
+    public int getX () {
+      return this.x;
+    }
     
-    int ydistance = this.x - 0;
-      if(ydistance < 0) {
-        ydistance = -ydistance
-      }
-      
-    int xdistance = this.y - 0;
-      if(xdistance < 0) {
-        xdistance = -xdistance;
-      }
+    public int getY () {
+      return this.y;
+    }
     
-    int distance = 
+    public double distanceFromOrigin () {
+     int ydistance = this.y - 0;
+     int xdistance = this.x - 0;
+     double distance = Math.sqrt((xdistance*xdistance)+(ydistance*ydistance));
+     return distance;
+    }
+    
+    public double distance (Point a) {
+      int ydist = this.y - a.y;
+      int xdist = this.x - a.x;
+      double dist = Math.sqrt(2*(xdist*xdist)+2*(ydist*ydist));
+      return dist;
+    }
+    
+    public String toString () {
+      String pointstring = ("(" + this.x + "," + this.y + ")");
+      return pointstring;
+    }
+    
+    public void setX (int a) {
+      this.x = a;
+    }
+    
+    public void setY (int b) {
+      this.y = b;
+    }
+    
+    public void translate (int c, int d) {
+      this.x = this.x + c;
+      this.y = this.y + d;
+    }
   }
-}
