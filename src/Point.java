@@ -5,10 +5,15 @@ public class Point {
   int b;
   
   public Point() { //Construct a point at (0, 0)
-  getX();
+  
+  this.x = 0;
+  this.y = 0;
   }
   
   public Point(int x, int y) { //Construct a point and set it to (x, y)
+  
+  this.x = x;
+  this.y = y;
   
     public int getX () {
       return this.x;
