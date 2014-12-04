@@ -1,16 +1,16 @@
 // A Point object represents a pair of (x, y) coordinates.
 public class Point {
   
-  int a;
-  int b;
+  public int a;
+  public int b;
   
-  public Point() { //Construct a point at (0, 0)
+  Point pzero = new Point() { //Construct a point at (0, 0)
   
   this.x = 0;
   this.y = 0;
   }
   
-  public Point(int x, int y) { //Construct a point and set it to (x, y)
+  Point pone = new Point(int x, int y) { //Construct a point and set it to (x, y)
   
   this.x = x;
   this.y = y;
@@ -38,8 +38,7 @@ public class Point {
     }
     
     public String toString () {
-      String pointstring = ("(" + this.x + "," + this.y + ")");
-      return pointstring;
+      return ("(" + this.x + "," + this.y + ")");
     }
     
     public void setX (int a) {
