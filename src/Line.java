@@ -25,4 +25,11 @@ public class Line {
   public String toString() {
     return ("(" + start.x + ", " + start.y + "), (" + end.x + ", " + end.y + ")");
   }
+  
+  public void translate(int a, int b) {
+    start.x += a;
+    end.x += a;
+    start.y += b;
+    end.y += b;
+  }
 }
