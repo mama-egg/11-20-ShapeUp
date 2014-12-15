@@ -1,33 +1,28 @@
 // A Line object represents a line defined by a pair of Points.
 public class Line {
-  Point start;
-  Point end;
-  Point p3 = new Point(0, 0);
-  int a;
-  int b;
   
-  public Line (Point p3, int a, int b) {
-    double slopezero = (p3.y - p3.y)/(p3.x - p3.x);
-    double plusb = p3.y - (slopezero * p3.x);
-    this.x = this.x + a;
-    this.y = this.y + b;
-    
+  public Point start;
+  public Point end;
+  
+  public Line() {
+    start = 0;
+    end = 0;
   }
   
-  public Line (Point start, Point end, int a, int b) {
-    public double length (Point start, Point end) {
-      distance(start, end);
-      return dist;
-    }
-    
-    public double slope (Point start, Point end) {
-      double slope = (end.y - start.y)/(end.x - strat.x);
-      return slope;
-    }
-    
-    public String toString (Point start, Point end) {
-      String linestring = ("((" + start.x + "," + start.y + ")(" + end.x + "," + end.y + "))");
-      return linestring;
-    }
+  public Line(Point startPoint, Point endPoint) {
+    start = startPoint;
+    end = endPoint;
+  }
+  
+  public double length(Point startPoint, Point endPoint) {
+    return Point.distance(startPoint, endPoint);
+  }
+  
+  public double slope() {
+    return (end.y - start.y) / (end.x - start.x);
+  }
+  
+  public String toString() {
+    return ("(" + start.x + ", " + start.y + "), (" + end.x + ", " + end.y + ")");
   }
 }
