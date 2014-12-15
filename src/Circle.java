@@ -6,7 +6,8 @@ public class Circle {
   
   //Constructors
   public Circle() {
-    center = 0;
+    center.x = 0;
+    center.y = 0;
     radius = 0;
   }
   
