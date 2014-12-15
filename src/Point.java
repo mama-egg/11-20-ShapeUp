@@ -1,56 +1,49 @@
 // A Point object represents a pair of (x, y) coordinates.
 public class Point {
   
-  public int a;
-  public int b;
+  public int x;
+  public int y;
   
-  Point pzero = new Point() { //Construct a point at (0, 0)
-  
-  this.x = 0;
-  this.y = 0;
+  public Point() {
+    this.x = 0;
+    this.y = 0;
   }
   
-  Point pone = new Point(int x, int y) { //Construct a point and set it to (x, y)
-  
-  this.x = x;
-  this.y = y;
-  
-    public int getX () {
-      return this.x;
-    }
-    
-    public int getY () {
-      return this.y;
-    }
-    
-    public double distanceFromOrigin () {
-     int ydistance = this.y - 0;
-     int xdistance = this.x - 0;
-     double distance = Math.sqrt((xdistance*xdistance)+(ydistance*ydistance));
-     return distance;
-    }
-    
-    public double distance (Point a) {
-      int ydist = this.y - a.y;
-      int xdist = this.x - a.x;
-      double dist = Math.sqrt(2*(xdist*xdist)+2*(ydist*ydist));
-      return dist;
-    }
-    
-    public String toString () {
-      return ("(" + this.x + "," + this.y + ")");
-    }
-    
-    public void setX (int a) {
-      this.x = a;
-    }
-    
-    public void setY (int b) {
-      this.y = b;
-    }
-    
-    public void translate (int c, int d) {
-      this.x = this.x + c;
-      this.y = this.y + d;
-    }
+  public Point() {
+    this.x = x;
+    this.y = y;
   }
+  
+  public int getX() {
+    return x;
+  }
+  
+  public int getY() {
+    return y;
+  }
+  
+  public double distanceFromOrigin() {
+    return Math.sqrt((x*x) + (y*y));
+  }
+  
+  public double distance(Point p) {
+    return 2 * (Math.sqrt(((p.x - x)*(p.x - x)) +((p.y - y)*(p.y - y)));
+  }
+  
+  public String toString() {
+    return "(" + x + ", " + y + ")";
+  }
+  
+  public void setX(int newX) {
+    x = newX;
+  }
+  
+  public void setY(int newY) {
+    y = newY;
+  }
+  
+  public void translate(int a, int b) {
+    x = x + a;
+    y = y + b;
+  }
+}
