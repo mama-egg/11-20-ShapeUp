@@ -5,8 +5,10 @@ public class Line {
   public Point end;
   
   public Line() {
-    start = 0;
-    end = 0;
+    start.x = 0;
+    stert.y = 0;
+    end.x = 0;
+    end.y = 0;
   }
   
   public Line(Point startPoint, Point endPoint) {
